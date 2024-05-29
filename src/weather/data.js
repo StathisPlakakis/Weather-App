@@ -1,4 +1,4 @@
-async function weather(city) {
+async function weatherCurrent(city) {
   try {
     const response = await fetch(
       `http://api.weatherapi.com/v1/current.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
@@ -37,8 +37,28 @@ async function weather(city) {
     }
   } catch (error) {
     console.log(error);
-    return 0;
+    return error.message;
   }
 }
 
-export default weather;
+async function weatherForcast(city) {
+  try {
+    const response = await fetch(
+      `http://api.weatherapi.com/v1	/forecast.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
+      {
+        mode: 'cors',
+      }
+    );
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+    } else {
+      throw new Error(`Hey my friend, you have a ${response.status} error!`);
+    }
+  } catch (error) {
+    console.log(error);
+    return error.message;
+  }
+}
+
+export  {weatherCurrent, weatherForcast};
