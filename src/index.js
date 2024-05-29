@@ -11,12 +11,14 @@ async function weather(city) {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
+      return data;
     } else {
       throw new Error(`${response.status}`);
     }
   } catch (error) {
     console.log(error);
+    return error.message;
   }
 }
 
-weather('london');
+weather('londmfmon');
