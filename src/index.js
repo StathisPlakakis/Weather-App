@@ -1,6 +1,4 @@
 import './style.css';
-import weather from './data';
+import weather from './weather/data';
 
-
-
-weather('london');
+weather('athens');
