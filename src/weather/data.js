@@ -32,11 +32,12 @@ async function weatherCurrent(city) {
       };
       return specificDataCurrent;
     } else {
-      throw new Error(`A ${response.status}, error was thrown!`);
+      throw new Error(
+        `A ${response.status}, error was thrown, in weatherCurrent API call!`
+      );
     }
   } catch (error) {
-    console.log(error);
-    return error.message;
+    throw error;
   }
 }
 
@@ -111,22 +112,26 @@ async function weatherForcast(city) {
       };
       return specificDataForecast;
     } else {
-      throw new Error(`Hey my friend, you have a ${response.status} error!`);
+      throw new Error(
+        `A ${response.status}, error was thrown, in weatherForecast API call!`
+      );
     }
   } catch (error) {
-    console.log(error);
-    return error.message;
+    throw error;
   }
 }
 
 async function weather(city) {
-  const [currentData, forecastData] = await Promise.all([
-    weatherCurrent(city),
-    weatherForcast(city),
-  ]);
-  const data = { ...currentData, ...forecastData };
-  console.log(data);
-  return data;
+  try {
+    const [currentData, forecastData] = await Promise.all([
+      weatherCurrent(city),
+      weatherForcast(city),
+    ]);
+    const data = { ...currentData, ...forecastData };
+    return data;
+  } catch (error) {
+    throw error;
+  }
 }
 
 export { weather };
