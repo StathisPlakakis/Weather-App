@@ -1,7 +1,7 @@
 import './style.css';
 import { weather } from './weather/data';
 
-weather('athens')
+weather('greece')
   .then((result) => {
     console.log(result);
   })

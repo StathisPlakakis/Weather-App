@@ -16,9 +16,11 @@ async function weatherCurrent(city) {
       const windSpeedF = data.current.wind_mph;
       const humidity = data.current.humidity;
       const condition = data.current.condition.text;
+      const icon = data.current.condition.icon;
       const city = data.location.name;
       const country = data.location.country;
       const specificDataCurrent = {
+        icon,
         temperatureC,
         temperatureF,
         windSpeedC,
@@ -30,6 +32,7 @@ async function weatherCurrent(city) {
         city,
         country,
       };
+      console.log(data.current.condition);
       return specificDataCurrent;
     } else {
       throw new Error(
