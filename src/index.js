@@ -1,5 +1,5 @@
 import './style.css';
-import { weather } from './weather/data';
+import { weather } from './weather/data'; 
 
 weather('greece')
   .then((result) => {
