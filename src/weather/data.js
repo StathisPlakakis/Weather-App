@@ -32,7 +32,6 @@ async function weatherCurrent(city) {
         city,
         country,
       };
-      console.log(data.current.condition);
       return specificDataCurrent;
     } else {
       throw new Error(
