@@ -5,6 +5,7 @@
   src: url('./assets/Roboto\ \(1\)/Roboto-Bold.ttf') format('truetype');
 }
 
+div,
 img,
 h1,
 h2,
@@ -16,8 +17,7 @@ nav,
 ul,
 li,
 button,
-input,
-div {
+input {
   padding: 0px;
   margin: 0px;
 }
@@ -35,13 +35,11 @@ body {
 }
 
 input {
-  font-family: cursive;
   font-family: 'Roboto-Bold', sans-serif;
   font-size: 1.5rem;
   outline: none;
   padding: 10px;
   border: none;
-  border-bottom: 1px solid white;
   background-color: var(--backgroundColor);
   color: var(--inputTextColor);
   letter-spacing: 1px;
@@ -49,4 +47,26 @@ input {
 
 input::placeholder {
   color: var(--placeholderColor);
+}
+
+.search {
+  display: grid;
+  justify-items: center;
+}
+
+.search-row {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.search-action {
+  height: 25px;
+  width: 25px;
+  background-image: url('./assets/Data/search.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
