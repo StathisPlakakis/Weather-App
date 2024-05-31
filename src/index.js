@@ -1,5 +1,4 @@
 import './style.css';
-import { weatherCurrent, weatherForcast } from './weather/data';
+import { weather } from './weather/data';
 
-weatherCurrent('athens');
-weatherForcast('athens');
+weather('athens');

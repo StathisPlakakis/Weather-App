@@ -30,7 +30,6 @@ async function weatherCurrent(city) {
         city,
         country,
       };
-      console.log(specificDataCurrent);
       return specificDataCurrent;
     } else {
       throw new Error(`A ${response.status}, error was thrown!`);
@@ -110,8 +109,6 @@ async function weatherForcast(city) {
         minTempC,
         minTempF,
       };
-
-      console.log(specificDataForecast);
       return specificDataForecast;
     } else {
       throw new Error(`Hey my friend, you have a ${response.status} error!`);
@@ -122,4 +119,14 @@ async function weatherForcast(city) {
   }
 }
 
-export { weatherCurrent, weatherForcast };
+async function weather(city) {
+  const [currentData, forecastData] = await Promise.all([
+    weatherCurrent(city),
+    weatherForcast(city),
+  ]);
+  const data = { ...currentData, ...forecastData };
+  console.log(data);
+  return data;
+}
+
+export { weather };
