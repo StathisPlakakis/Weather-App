@@ -5,6 +5,13 @@
   src: url('./assets/Roboto\ \(1\)/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto-Light';
+  font-weight: 300;
+  font-style: normal;
+  src: url('./assets/Roboto\ \(1\)/Roboto-Light.ttf') format('truetype');
+}
+
 div,
 img,
 h1,
@@ -69,4 +76,12 @@ input::placeholder {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 5px;
+  font-family: 'Roboto-Light';
+  color: red;
+  font-size: 1.3rem;
 }
