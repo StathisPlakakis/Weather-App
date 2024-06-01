@@ -50,6 +50,7 @@ input {
   background-color: var(--backgroundColor);
   color: var(--inputTextColor);
   letter-spacing: 1px;
+  width: 300px;
 }
 
 input::placeholder {
