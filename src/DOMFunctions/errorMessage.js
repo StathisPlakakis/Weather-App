@@ -10,4 +10,9 @@ function createNetworkErrorMessage() {
   error.textContent = 'Please check your internet connection.';
 }
 
-export { createServerErrorMessage, createNetworkErrorMessage };
+function clearErrorMessage() {
+  error.className = 'error';
+  error.textContent = '';
+}
+
+export { createServerErrorMessage, createNetworkErrorMessage, clearErrorMessage };
