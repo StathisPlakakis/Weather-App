@@ -31,8 +31,7 @@ input {
 
 :root {
   --backgroundColor: rgb(99, 38, 157);
-  --inputTextColor: rgb(213, 194, 228);
-  --placeholderColor: rgb(156, 149, 161);
+  --activeDegreeButton: rgb(145, 102, 186);
 }
 
 body {
@@ -48,13 +47,13 @@ input {
   padding: 10px;
   border: none;
   background-color: var(--backgroundColor);
-  color: var(--inputTextColor);
+  color: white;
   letter-spacing: 1px;
   width: 300px;
 }
 
 input::placeholder {
-  color: var(--placeholderColor);
+  color: white;
 }
 
 .search {
@@ -82,7 +81,32 @@ input::placeholder {
 
 .error {
   margin-top: 5px;
-  font-family: 'Roboto-Light';
+  font-family: 'Roboto-Light', sans-serif;
   color: red;
   font-size: 1.3rem;
+  min-height: 30px;
+}
+
+.c-f {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.c,
+.f {
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 1.3rem;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  background-color: var(--backgroundColor);
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.c:hover, .f:hover {
+  background-color: var(--activeDegreeButton);
 }
