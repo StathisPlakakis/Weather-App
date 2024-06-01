@@ -12,6 +12,13 @@
   src: url('./assets/Roboto\ \(1\)/Roboto-Light.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto-Regular';
+  font-weight: 400;
+  font-style: normal;
+  src: url('./assets/Roboto\ \(1\)/Roboto-Regular.ttf');
+}
+
 div,
 img,
 h1,
@@ -113,4 +120,11 @@ input::placeholder {
 
 .selected {
   background-color: var(--activeDegreeButton);
+}
+
+.weather {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 20px;
 }

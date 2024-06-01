@@ -4,11 +4,13 @@ import {
   createNetworkErrorMessage,
   clearErrorMessage,
 } from './errorMessage';
+import renderAllData from './renderWeatherData';
 
 function searchWeatherFor(city) {
   weather(city)
     .then((result) => {
-      clearErrorMessage()
+      clearErrorMessage();
+      renderAllData(result);
       console.log(result);
     })
     .catch((error) => {
