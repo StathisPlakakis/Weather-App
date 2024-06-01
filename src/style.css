@@ -110,3 +110,7 @@ input::placeholder {
 .c:hover, .f:hover {
   background-color: var(--activeDegreeButton);
 }
+
+.selected {
+  background-color: var(--activeDegreeButton);
+}
