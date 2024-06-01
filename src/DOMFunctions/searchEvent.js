@@ -1,4 +1,8 @@
 import { weather } from '../weather/data';
+import {
+  createServerErrorMessage,
+  createNetworkErrorMessage,
+} from './errorMessage';
 
 function searchWeatherFor(city) {
   weather(city)
@@ -6,7 +10,11 @@ function searchWeatherFor(city) {
       console.log(result);
     })
     .catch((error) => {
-      console.error(error);
+      if (error.name === 'TypeError') {
+        createNetworkErrorMessage();
+      } else {
+        createServerErrorMessage();
+      }
     });
 }
 
