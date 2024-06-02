@@ -19,19 +19,7 @@
   src: url('./assets/Roboto\ \(1\)/Roboto-Regular.ttf');
 }
 
-div,
-img,
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-nav,
-ul,
-li,
-button,
-input {
+* {
   padding: 0px;
   margin: 0px;
 }
@@ -39,6 +27,10 @@ input {
 :root {
   --backgroundColor: rgb(99, 38, 157);
   --activeDegreeButton: rgb(145, 102, 186);
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
@@ -49,7 +41,7 @@ body {
 
 input {
   font-family: 'Roboto-Bold', sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   outline: none;
   padding: 10px;
   border: none;
@@ -90,7 +82,7 @@ input::placeholder {
   margin-top: 5px;
   font-family: 'Roboto-Light', sans-serif;
   color: red;
-  font-size: 1.3rem;
+  font-size: 2rem;
   min-height: 30px;
 }
 
@@ -104,7 +96,7 @@ input::placeholder {
 .c,
 .f {
   font-family: 'Roboto-Bold', sans-serif;
-  font-size: 1.3rem;
+  font-size: 2rem;
   padding: 10px;
   width: 100px;
   border-radius: 10px;
@@ -123,8 +115,11 @@ input::placeholder {
 }
 
 .weather {
-  font-family: 'Roboto-Regular', sans-serif;
-  font-size: 1.5rem;
   color: white;
   margin-top: 20px;
+}
+
+.condition {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 2.5rem;
 }
