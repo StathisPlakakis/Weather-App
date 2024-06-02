@@ -1,20 +1,21 @@
 function renderAllData(result) {
   const degreeRepr = document.querySelector('.selected').textContent;
 
-  const condition = document.querySelector('.condition');
+  const condition = document.querySelector('.condition > p');
   condition.textContent = result.condition;
 
-  const city_country = document.querySelector('.city-country');
+  const city_country = document.querySelector('.city-country > p');
   city_country.textContent = `${result.city}, ${result.country}`;
 
-  const dateTime = document.querySelector('.date');
+  const dateTime = document.querySelector('.date > p');
   dateTime.textContent = result.time;
 
-  const temperature = document.querySelector('.temperature');
+  const temperature = document.querySelector('.temperature > p');
   temperature.textContent =
     degreeRepr === 'C'
-      ? Math.round(result.temperatureC)
-      : Math.round(result.temperatureF);
+      ? `${Math.round(result.temperatureC)}°C`
+      : `${Math.round(result.temperatureF)}°F`;
+
 }
 
 export default renderAllData;

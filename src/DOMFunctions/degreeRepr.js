@@ -7,7 +7,9 @@ function changeBackgroundColor() {
     button.classList.toggle('selected');
   });
   const result = getState();
-  renderAllData(result);
+  if (result) {
+    renderAllData(result);
+  }
 }
 
 export default changeBackgroundColor;
