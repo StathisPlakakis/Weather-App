@@ -19,7 +19,10 @@ async function weatherCurrent(city) {
       const icon = data.current.condition.icon;
       const city = data.location.name;
       const country = data.location.country;
+      const time = data.location.localtime;
+
       const specificDataCurrent = {
+        time,
         icon,
         temperatureC,
         temperatureF,

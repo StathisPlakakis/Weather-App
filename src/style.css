@@ -106,7 +106,8 @@ input::placeholder {
   cursor: pointer;
 }
 
-.c:hover, .f:hover {
+.c:hover,
+.f:hover {
   background-color: var(--activeDegreeButton);
 }
 
@@ -119,12 +120,22 @@ input::placeholder {
   margin-top: 20px;
 }
 
+.current {
+  display: grid;
+  gap: 10px;
+}
+
 .condition {
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 2.5rem;
 }
 
-.city-country{
+.city-country {
   font-family: 'Roboto-Bold', sans-serif;
   font-size: 3.5rem;
+}
+
+.date {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-size: 2.5rem;
 }
