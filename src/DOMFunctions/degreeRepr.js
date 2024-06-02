@@ -1,12 +1,13 @@
-function changeBackgroundColor(event) {
+import { getState } from './state';
+import renderAllData from './renderWeatherData';
+
+function changeBackgroundColor() {
   const buttons = document.querySelectorAll('.c-f button');
-  const element = event.target;
   buttons.forEach((button) => {
-    if (button.classList.contains('selected')) {
-      button.classList.remove('selected');
-    }
+    button.classList.toggle('selected');
   });
-  element.classList.add('selected')
+  const result = getState();
+  renderAllData(result);
 }
 
 export default changeBackgroundColor;

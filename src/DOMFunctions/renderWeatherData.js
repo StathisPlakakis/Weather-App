@@ -12,7 +12,9 @@ function renderAllData(result) {
 
   const temperature = document.querySelector('.temperature');
   temperature.textContent =
-    degreeRepr === 'C' ? result.temperatureC : result.temperatureF;
+    degreeRepr === 'C'
+      ? Math.round(result.temperatureC)
+      : Math.round(result.temperatureF);
 }
 
 export default renderAllData;
