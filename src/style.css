@@ -123,3 +123,8 @@ input::placeholder {
   font-family: 'Roboto-Regular', sans-serif;
   font-size: 2.5rem;
 }
+
+.city-country{
+  font-family: 'Roboto-Bold', sans-serif;
+  font-size: 3.5rem;
+}
