@@ -1,4 +1,6 @@
 function renderAllData(result) {
+  const degreeRepr = document.querySelector('.selected').textContent;
+
   const condition = document.querySelector('.condition');
   condition.textContent = result.condition;
 
@@ -7,6 +9,10 @@ function renderAllData(result) {
 
   const dateTime = document.querySelector('.date');
   dateTime.textContent = result.time;
+
+  const temperature = document.querySelector('.temperature');
+  temperature.textContent =
+    degreeRepr === 'C' ? result.temperatureC : result.temperatureF;
 }
 
 export default renderAllData;
