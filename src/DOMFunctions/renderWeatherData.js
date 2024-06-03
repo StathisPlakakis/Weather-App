@@ -61,6 +61,17 @@ function renderAllData(result) {
     degreeRepr === 'C'
       ? `Feels like : ${Math.round(result.feelsLikeC)} °C`
       : `Feels like : ${Math.round(result.feelsLikeF)} °F`;
+
+  const imgForHumidity = document.querySelector('.imgForHumidity');
+  const imgForHumidityElement = document.createElement('img');
+  imgForHumidityElement.src = `${imagesData['humidity.png']}`;
+  if (imgForHumidity.children.length > 0) {
+    imgForHumidity.removeChild(imgForHumidity.lastChild);
+  }
+  imgForHumidity.appendChild(imgForHumidityElement);
+
+  const humidity = document.querySelector('.humidity > p');
+  humidity.textContent = `Humidity : ${result.humidity} %`;
 }
 
 export default renderAllData;

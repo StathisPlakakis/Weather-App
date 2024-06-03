@@ -168,7 +168,7 @@ input::placeholder {
   height: 5rem;
 }
 
-.feel {
+.important-data > * {
   display: grid;
   grid-auto-flow: column;
   justify-content: start;
