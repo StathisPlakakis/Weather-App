@@ -72,6 +72,48 @@ function renderAllData(result) {
 
   const humidity = document.querySelector('.humidity > p');
   humidity.textContent = `Humidity : ${result.humidity} %`;
+
+  const imgForWind = document.querySelector('.imgForWind');
+  const imgForWindElement = document.createElement('img');
+  imgForWindElement.src = `${imagesData['wind.png']}`;
+  if (imgForWind.children.length > 0) {
+    imgForWind.removeChild(imgForWind.lastChild);
+  }
+  imgForWind.appendChild(imgForWindElement);
+
+  const wind = document.querySelector('.wind > p');
+  wind.textContent =
+    degreeRepr === 'C'
+      ? `Wind speed : ${Math.round(result.windSpeedC)} km/h`
+      : `Wind speed : ${Math.round(result.windSpeedC)} mph`;
+
+  const imgForMax = document.querySelector('.imgForMax');
+  const imgForMaxElement = document.createElement('img');
+  imgForMaxElement.src = `${imagesData['hot-sale.png']}`;
+  if (imgForMax.children.length > 0) {
+    imgForMax.removeChild(imgForMax.lastChild);
+  }
+  imgForMax.appendChild(imgForMaxElement);
+
+  const max = document.querySelector('.max > p');
+  max.textContent =
+    degreeRepr === 'C'
+      ? `Max temperature : ${Math.round(result.maxTempC)} °C`
+      : `Max temperature : ${Math.round(result.maxTempF)} °F`;
+
+  const imgForMin = document.querySelector('.imgForMin');
+  const imgForMinElement = document.createElement('img');
+  imgForMinElement.src = `${imagesData['snowflake.png']}`;
+  if (imgForMin.children.length > 0) {
+    imgForMin.removeChild(imgForMin.lastChild);
+  }
+  imgForMin.appendChild(imgForMinElement);
+
+  const min = document.querySelector('.min > p');
+  min.textContent =
+    degreeRepr === 'C'
+      ? `Min temperature : ${Math.round(result.minTempC)} °C`
+      : `Min temperature : ${Math.round(result.minTempF)} °F`;
 }
 
 export default renderAllData;
