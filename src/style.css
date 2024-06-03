@@ -144,3 +144,14 @@ input::placeholder {
   font-family: 'Roboto-Bold', sans-serif;
   font-size: 13rem;
 }
+
+.currentConditionImage {
+  width: 20rem;
+  height: 20rem;
+}
+
+.main-data {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}

@@ -32,6 +32,7 @@ function renderAllData(result) {
     ? path.match(/day\/(.+)/)[1]
     : path.match(/night\/(.+)/)[1];
   const imgElement = document.createElement('img');
+  imgElement.classList.add('currentConditionImage');
   imgElement.src = isDay
     ? `${imagesDay[correctImage]}`
     : `${imagesNight[correctImage]}`;
