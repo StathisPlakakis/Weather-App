@@ -1,3 +1,5 @@
+import importAll from './importAllImages';
+
 function renderAllData(result) {
   const degreeRepr = document.querySelector('.selected').textContent;
 
@@ -16,6 +18,28 @@ function renderAllData(result) {
       ? `${Math.round(result.temperatureC)}°C`
       : `${Math.round(result.temperatureF)}°F`;
 
+  const imagesDay = importAll(
+    require.context('../assets/64x64/day', false, /\.(png|jpe?g|svg)$/)
+  );
+  const imagesNight = importAll(
+    require.context('../assets/64x64/night', false, /\.(png|jpe?g|svg)$/)
+  );
+  const mainData = document.querySelector('.main-data');
+  const icon = result.icon;
+  const path = icon.match(/weather\/(.+)/)[1];
+  const isDay = path.includes('day');
+  const correctImage = isDay
+    ? path.match(/day\/(.+)/)[1]
+    : path.match(/night\/(.+)/)[1];
+  const imgElement = document.createElement('img');
+  imgElement.src = isDay
+    ? `${imagesDay[correctImage]}`
+    : `${imagesNight[correctImage]}`;
+
+  if (mainData.children.length > 1) {
+    mainData.removeChild(mainData.lastChild);
+  }
+  mainData.appendChild(imgElement);
 }
 
 export default renderAllData;
