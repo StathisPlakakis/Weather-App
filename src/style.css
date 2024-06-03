@@ -154,4 +154,5 @@ input::placeholder {
   display: grid;
   grid-auto-flow: column;
   align-items: center;
+  gap: 2rem;
 }
