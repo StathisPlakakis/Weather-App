@@ -153,6 +153,25 @@ input::placeholder {
 .main-data {
   display: grid;
   grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.important-data {
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 2rem;
+}
+
+.important-data img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.feel {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
   align-items: center;
   gap: 2rem;
 }

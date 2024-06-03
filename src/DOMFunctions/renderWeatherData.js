@@ -18,6 +18,7 @@ function renderAllData(result) {
       ? `${Math.round(result.temperatureC)}°C`
       : `${Math.round(result.temperatureF)}°F`;
 
+  //this block of code imports all images and set the correct img for current condition
   const imagesDay = importAll(
     require.context('../assets/64x64/day', false, /\.(png|jpe?g|svg)$/)
   );
@@ -41,6 +42,25 @@ function renderAllData(result) {
     mainData.removeChild(mainData.lastChild);
   }
   mainData.appendChild(imgElement);
+  //here the the block code stops
+
+  const imagesData = importAll(
+    require.context('../assets/Data', false, /\.(png|jpe?g|svg)$/)
+  );
+
+  const imgForFeel = document.querySelector('.imgForFeel');
+  const imgForFeelElement = document.createElement('img');
+  imgForFeelElement.src = `${imagesData['thermometer.png']}`;
+  if (imgForFeel.children.length > 0) {
+    imgForFeel.removeChild(imgForFeel.lastChild);
+  }
+  imgForFeel.appendChild(imgForFeelElement);
+
+  const feel = document.querySelector('.feel > p');
+  feel.textContent =
+    degreeRepr === 'C'
+      ? `Feels like : ${Math.round(result.feelsLikeC)} °C`
+      : `Feels like : ${Math.round(result.feelsLikeF)} °F`;
 }
 
 export default renderAllData;
