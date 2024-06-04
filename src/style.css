@@ -37,6 +37,7 @@ body {
   background-color: var(--backgroundColor);
   display: grid;
   justify-items: center;
+  gap: 1.1rem;
 }
 
 input {
@@ -180,8 +181,6 @@ footer {
   font-family: 'Roboto-Light', sans-serif;
   font-size: 2rem;
   color: white;
-  position: absolute;
-  bottom: 0;
 }
 
 footer a:visited {

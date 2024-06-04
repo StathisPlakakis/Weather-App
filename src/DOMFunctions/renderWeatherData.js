@@ -85,7 +85,7 @@ function renderAllData(result) {
   wind.textContent =
     degreeRepr === 'C'
       ? `Wind speed : ${Math.round(result.windSpeedC)} km/h`
-      : `Wind speed : ${Math.round(result.windSpeedC)} mph`;
+      : `Wind speed : ${Math.round(result.windSpeedF)} mph`;
 
   const imgForMax = document.querySelector('.imgForMax');
   const imgForMaxElement = document.createElement('img');
