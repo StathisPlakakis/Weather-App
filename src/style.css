@@ -142,12 +142,12 @@ input::placeholder {
 
 .temperature {
   font-family: 'Roboto-Bold', sans-serif;
-  font-size: 13rem;
+  font-size: 10rem;
 }
 
 .currentConditionImage {
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .main-data {
@@ -171,7 +171,19 @@ input::placeholder {
 .important-data > * {
   display: grid;
   grid-auto-flow: column;
-  justify-content: start;
+  justify-items: start;
   align-items: center;
   gap: 2rem;
+}
+
+footer {
+  font-family: 'Roboto-Light', sans-serif;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+footer a:visited {
+  color: black;
 }
