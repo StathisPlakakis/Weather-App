@@ -1,7 +1,7 @@
 async function weatherCurrent(city) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
+      `https://api.weatherapi.com/v1/current.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
       {
         mode: 'cors',
       }
@@ -49,7 +49,7 @@ async function weatherCurrent(city) {
 async function weatherForcast(city) {
   try {
     const response = await fetch(
-      `http://api.weatherapi.com/v1	/forecast.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
+      `https://api.weatherapi.com/v1	/forecast.json?key=cd485184bc0d44e5b67172805242305&q=${city}`,
       {
         mode: 'cors',
       }
