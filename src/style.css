@@ -187,3 +187,10 @@ footer {
 footer a:visited {
   color: black;
 }
+
+.loading {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 50%;
+}
